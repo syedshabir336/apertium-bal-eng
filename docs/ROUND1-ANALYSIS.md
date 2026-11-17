@@ -11,8 +11,8 @@
 All speaker examples are native-speaker elicitation. Original Latin spellings,
 word boundaries, capitalization, and punctuation are preserved, except where
 the speaker explicitly corrected an entry. No automatic transliteration or
-spelling correction has been applied. Round 5 includes a follow-up answer
-for “They do not eat food”; its fifth prompt/form mismatch remains flagged.
+spelling correction has been applied. Round 5 includes follow-up clarification of both the positive and negative
+“they eat food” forms; the speaker's two positive variants are preserved.
 
 The five initial lexical entries in `data/bal-eng-lexicon.tsv` remain marked
 `speaker-provided-unreviewed`.
@@ -196,17 +196,14 @@ in Round 5 versus `ma` in Round 4; do not normalize the difference.
 
 ### Plural “they” and prompt/form mismatch
 
-The fifth Round 5 response was supplied against the prompt “They eat food”
-as exactly `Aan nagn na warangan.`. The speaker subsequently supplied
-the same exact form as the answer to “They do not eat food”:
-`Aan nagn na warangan.` This follow-up is recorded separately as R5-06
-and confirms that this form means “They do not eat food” in this context.
-
-The original R5-05 entry remains unchanged and flagged
-`speaker-provided-needs-meaning-confirmation`; do not treat it as a
-confirmed positive (“They eat food”) translation. The positive plural
-eating form is still needed. Round 3 contains `Aan rog an` for “They are
-going”, but that does not establish the positive simple-present form.
+The fifth Round 5 response was initially supplied against “They eat food”
+as `Aan nagn na warangan.`. The speaker then confirmed that this same
+form means “They do not eat food” and supplied the positive form as
+`Aan nagn warangan/waragan.`. The positive alternatives are recorded
+in R5-05 as speaker-provided, unreviewed variants; the negative form is
+recorded separately in R5-06. Preserve both positive alternatives until
+the speaker clarifies whether they are pronunciation, spelling, or usage
+variants.
 
 ### Demonstrative and possessive noun phrases
 
@@ -233,8 +230,9 @@ speaker confirmation.
 - Possessive/demonstrative examples include `mainn`, `Main`, `mai`,
   `ae`, `Ee`, and `Aa`; keep them distinct until confirmed.
 - The Round 3 correction `ma shuzagun` remains authoritative.
-- The Round 5 form `Aan nagn na warangan` is confirmed for the negative
-  “They do not eat food”; it is not confirmed for the positive prompt.
+- The positive plural form is supplied as `Aan nagn warangan/waragan`;
+  both alternatives remain unreviewed. `Aan nagn na warangan` is confirmed
+  for the negative “They do not eat food”.
 
 ## Current implementation boundary
 
