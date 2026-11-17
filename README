@@ -26,8 +26,11 @@ translation system.
 * Language: Balochi (`bal`, ISO 639-3)
 * Variety: Suleimani Balochi, as specified and reviewed by native speakers
 * Target directions: `bal-eng` and `eng-bal`
-* Initial orthography: to be agreed with native speakers before dictionary
-  entries and morphological paradigms are committed
+* Canonical script: Latin/Roman
+* Encoding: UTF-8; canonical Unicode normalization: NFC
+* Exact vowel/consonant graphemes, diacritics, and accepted spelling variants
+  remain to be agreed with native speakers and documented before lexical data
+  is populated.
 
 The dialect label "Suleimani" must be treated as a linguistic requirement,
 not as a synonym for Kurdish Sulaymaniyah/Sorani or Kurmanji. Do not import
@@ -35,7 +38,7 @@ Kurdish vocabulary, morphology, or grammatical rules as Balochi data.
 
 ## Migration plan
 
-1. Establish and document the Suleimani Balochi dialect and spelling
+1. Establish and document the Suleimani Balochi dialect and Latin spelling
    conventions with native-speaker review.
 2. Add or develop a Balochi monolingual Apertium package (`apertium-bal`):
    lexical categories, morphological paradigms, analyzer/generator,
@@ -50,7 +53,8 @@ Kurdish vocabulary, morphology, or grammatical rules as Balochi data.
    to `bal-eng` / `eng-bal`; validate and run both directions end-to-end.
 
 See [docs/SULEIMANI-BALOCHI-DESIGN.md](docs/SULEIMANI-BALOCHI-DESIGN.md)
-for the initial linguistic and engineering checklist.
+and [docs/ORTHOGRAPHY-LATIN.md](docs/ORTHOGRAPHY-LATIN.md) for the initial
+linguistic and engineering requirements.
 
 ## Build status
 
@@ -68,6 +72,6 @@ https://apertium.org/ and https://wiki.apertium.org/wiki/Installation.
 
 ## License
 
-See [COPYING](COPYING). Existing files retain their original copyright and
+See `COPYING`. Existing files retain their original copyright and
 license notices. New linguistic data must include its source and applicable
 license/permission information.
