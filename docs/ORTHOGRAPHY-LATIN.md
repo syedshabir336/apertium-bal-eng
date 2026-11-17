@@ -49,3 +49,13 @@ Once the inventory is approved, add tests for:
 - Preservation of phonemic distinctions.
 - Analyzer/generator round trips.
 - Consistent spelling in both `bal-eng` and `eng-bal` examples.
+
+
+## Lexical spelling preference: `warangan`
+
+For the speaker-elicited form related to the root `warag`, prefer
+`warangan` in written output. Retain `waragan` as an accepted
+variant because speakers may differ in nasal versus non-nasal pronunciation.
+This is a lexical spelling preference supplied by the speaker, not a
+general rule for adding or deleting `n` in other words. The raw corpus
+continues to preserve both alternatives.
