@@ -248,3 +248,14 @@ Elicit the positive plural “They eat food” form, and continue short everyday
 sentences that distinguish person, number, tense/aspect, negation, and
 demonstratives. Retain exact raw answers before proposing standardized
 spellings or grammatical segmentation.
+
+
+### Speaker clarification: preferred spelling of the plural form
+
+The speaker clarified that `warangan` is preferred because it is a form of
+the root `warag`. `waragan` is an alternative spelling associated with
+variation in nasal versus non-nasal pronunciation among speakers. Treat
+`warangan` as the preferred written form for this item and retain
+`waragan` as an accepted recorded variant. Do not interpret the
+difference as a separate grammatical form. Preserve the speaker's raw
+alternatives in the corpus.
