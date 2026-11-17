@@ -25,20 +25,39 @@ Before implementing morphology or adding vocabulary, record:
 Do not infer that "Suleimani" means Sorani Kurdish, Kurmanji Kurdish, or the
 Kurdish spoken in Sulaymaniyah. Balochi and Kurdish are distinct languages.
 
-## 2. Orthography policy
+## 2. Orthography policy — Latin/Roman (selected)
 
-Choose one canonical input/output orthography with native-speaker review.
-Document:
+The canonical script for the first implementation is **Latin/Roman**. All
+dictionary lemmas, inflectional forms, transfer examples, and regression
+fixtures must use this canonical representation.
 
-- Inventory of vowels and consonants and their canonical graphemes.
-- Representation of long vowels, aspiration, retroflexes, and other contrasts
-  present in the selected variety.
-- Word boundaries, clitics, compounds, capitalization, punctuation, and
-  loanword spelling.
-- Accepted alternate spellings and normalization rules.
-- Unicode normalization policy (NFC) and UTF-8 requirements.
+The script choice is settled; the exact dialect-specific spelling inventory
+is not. Before adding a large lexicon, native speakers must confirm:
 
-Do not silently transliterate between scripts or collapse phonemic contrasts.
+- The canonical Latin grapheme for every vowel and consonant contrast in this
+  Suleimani variety.
+- Whether long vowels, aspiration, retroflexes, and other contrasts require
+  diacritics or digraphs, and the exact spelling of each.
+- Whether borrowed words retain source spelling or follow Balochi spelling.
+- Word boundaries, clitics, compounds, capitalization, and punctuation.
+- Accepted alternate spellings and the normalization rules that map them to
+  canonical forms without merging distinct sounds or words.
+
+Engineering defaults:
+
+- Store source files as UTF-8 and normalize authored lexical data to Unicode
+  NFC.
+- Treat the canonical Latin spelling as the dictionary/generator output.
+- Add alternate spellings as explicit, reviewed analysis-side variants;
+  do not silently rewrite them when they may encode a phonemic distinction.
+- Keep any future Arabic-derived-script transliteration in a separate
+  conversion layer. It must not be mixed into the lexical dictionary or
+  morphology rules.
+- Include round-trip tests for normalization and every approved spelling
+  variant.
+
+No speculative transliteration table is imposed by this document. A Latin
+script choice alone does not determine the correct Balochi grapheme inventory.
 
 ## 3. Balochi monolingual package
 
@@ -59,7 +78,7 @@ Required components:
 
 Each entry should record at least:
 
-- Balochi lemma and lexical category.
+- Balochi lemma in canonical Latin spelling and lexical category.
 - English equivalent(s), with sense distinctions where necessary.
 - Inflectional paradigm or invariant status.
 - Transitivity/valency and relevant grammatical features for verbs.
@@ -111,6 +130,6 @@ A release can be called a Suleimani Balochi translator only when:
 1. No Kurdish dictionary, corpus, tagger model, or transfer rule is used as
    Balochi linguistic data.
 2. Both `bal-eng` and `eng-bal` build and run.
-3. The dialect and orthography are documented and reviewed by speakers.
+3. The dialect and Latin orthography are documented and reviewed by speakers.
 4. Both directions pass reproducible morphological and sentence-level tests.
 5. Data sources, attribution, and licenses are documented.
