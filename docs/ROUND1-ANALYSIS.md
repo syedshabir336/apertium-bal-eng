@@ -1,10 +1,12 @@
-# Round 1 and Round 2 speaker data and research notes
+# Speaker elicitation and research notes: Rounds 1–3
 
 ## Data provenance
 
-Round 1 examples are stored in `data/speaker-corpus-round1.tsv`.
-Round 2 examples are stored in `data/speaker-corpus-round2.tsv`.
-All twenty English prompts and Balochi equivalents were supplied by a
+- Round 1: `data/speaker-corpus-round1.tsv`
+- Round 2: `data/speaker-corpus-round2.tsv`
+- Round 3: `data/speaker-corpus-round3.tsv`
+
+All thirty English prompts and Balochi equivalents were supplied by a
 native speaker. Original Latin spellings, word boundaries, and punctuation
 are preserved exactly. No automatic transliteration or spelling correction
 has been applied.
@@ -18,25 +20,18 @@ dictionary or a claim of standard orthography.
 - Hamid Ali Baloch (2023), “The Sulaimani Dialect of the Balochi Language:
   A Phonological Study,” *Makhz (Research Journal)* 4(4), 67–84,
   DOI: https://doi.org/10.47205/makhz.2023(4-IV)urdu-07.
-  The article identifies Sulaimani as a Balochi dialect and associates it
-  with Eastern/Northern/Rindi naming in earlier descriptions. Its abstract
-  places speakers in Sindh, Punjab, and eastern Balochistan.
 - University of Arizona, Iranian Languages, “Balochi”:
   https://iranian-languages.arizona.edu/balochi
-  Provides a broad morphosyntactic overview and warns, by its dialectal
-  description, against assuming one dialect's paradigm represents all Balochi.
 - Cambridge, “Progressive constructions in different Balochi dialects from
   a diachronic and an areal linguistic point of view”:
   https://doi.org/10.1017/S0041977X24000144
-  Documents multiple progressive constructions across Balochi varieties.
 - Uppsala University's Balochi Language Project:
   https://www.uu.se/en/department/linguistics-and-philology/research/proj/the-balochi-language
-  Documents broad dialect groupings and dialect variation.
 
-These references establish a useful research baseline; they do not
-independently verify every speaker-provided Sulaimani word or construction.
-General Balochi paradigms must not be copied into the Sulaimani grammar
-without matching evidence.
+These references establish a useful research baseline and dialect variation;
+they do not independently verify every speaker-provided Sulaimani word or
+construction. General Balochi paradigms must not be copied into the
+Sulaimani grammar without matching evidence.
 
 ## Round 1 observations (hypotheses only)
 
@@ -55,8 +50,6 @@ without matching evidence.
 
 ### Present progressive / motion
 
-The four elicited sentences are:
-
 - `man rog aan` — I am going.
 - `tho rog ee` — You are going (singular).
 - `aan rog een` — He is going.
@@ -65,60 +58,103 @@ The four elicited sentences are:
 The sequence `rog` remains constant while the final forms vary
 (`aan`, `ee`, `een`). This is consistent with a person/number-marked
 finite element or copula-like ending, but segmentation is not established.
-The identical third-person forms for “he” and “she” are consistent with
-Balochi's widely described lack of grammatical gender, but this must be
-checked in the target variety and against further pronouns. Do not create
-separate masculine/feminine forms from these examples.
+Identical forms for “he” and “she” may indicate no gender distinction in
+this construction; do not create separate masculine/feminine forms.
 
-### Past
+### Past, negation, possession, and imperative
 
-- `man shuzagan` — I went.
-
-This is a single past example. The stem, tense marker, and person marking
-cannot yet be segmented confidently. Elicit other persons and a contrasting
-present form before building a past paradigm.
-
-### Negation
-
-- `man av aa na lotan` — I do not want water.
-
-Compare with Round 1 `man av a lotan` — I want water. The added sequence
-`aa na` occurs before `lotan` in the negative example. Its segmentation
-and exact function are unknown. Do not assume it is a single negation prefix;
-it may include an aspectual/modal particle or other element.
-
-### Demonstratives and possession
-
+- `man shuzagan` — I went. One past example only; do not segment it yet.
+- `man av aa na lotan` — I do not want water, compared with
+  `man av a lotan` — I want water. The sequence `aa na` is not yet analysed.
 - `ae mainn log een` — This is my house.
 - `aan thai log een` — That is your house.
-
-These examples suggest candidate demonstrative/possessive forms:
-`ae`, `aan`, `mainn`, and `thai`. The same final `een` occurs in both
-copular sentences. Confirm each form in isolation and in contrasting
-possessor/demonstrative contexts before assigning tags.
-
-### Eating and imperative
-
 - `ma nagn warag un` — We are eating food.
 - `mana av aa de` — Give me water.
 
-The eating example suggests `nagn` as food and `warag` as a candidate
-verbal/infinitival form, with `un` at the end. The imperative example
-suggests `mana` as “to me/me”, `av` as water, and `de` as “give”, but
-the precise syntax and morphology are not yet established.
+Candidate forms are worth tracking, but token boundaries and grammatical
+functions remain unconfirmed.
 
-## Cross-dialect caution from research
+## Round 3 observations (hypotheses only)
 
-Published descriptions of Balochi report no grammatical gender in the
-language generally, but case marking, pronoun forms, tense alignment, and
-progressive constructions vary by dialect. Cambridge's comparative work
-specifically documents multiple progressive strategies. These findings make
-the speaker's identical “he/she” sentence a plausible pattern, but they do
-not license importing a standard paradigm into this dialect.
+### Present progressive / motion across persons
+
+- `man rog aan` — I am going.
+- `tho rog ee` — You are going (singular).
+- `aan rog een` — He is going.
+- `aan rog een` — She is going.
+- `Ma rog un.` — We are going.
+- `Aan rog an.` — They are going.
+- `Sha kul rog ee.` — You all are going.
+
+The current surface pattern is:
+
+| English subject | Subject form as elicited | Ending after `rog` |
+| --- | --- | --- |
+| I | `man` | `aan` |
+| You (singular) | `tho` | `ee` |
+| He / she | `aan` | `een` |
+| We | `Ma` | `un` |
+| They | `Aan` | `an` |
+| You all | `Sha kul` | `ee` |
+
+This is a provisional surface paradigm, not yet a morphological analysis.
+Notice the potentially meaningful differences in case/spelling:
+`man` vs `Ma`, and `aan` as a subject form for both third-person
+singular and plural contexts. These may reflect orthographic capitalization,
+pronunciation, or different forms; do not normalize them without confirmation.
+The “you all” sentence shares `ee` with singular “you”, suggesting that
+number may be expressed in `Sha kul`, but this needs further examples.
+
+### Eating
+
+- `Ma nagn warag aan.` — I am eating food. (Round 3 prompt)
+- `Aan nagn warag een.` — He is eating food.
+- `ma nagn warag un.` — We are eating food. (Round 2)
+
+The Round 3 first-person singular prompt uses `Ma`, while the earlier
+first-person plural prompt used lowercase `ma` with `un`. Preserve both
+exactly. The contrast between `aan` and `un` at the end is consistent
+with the endings observed with `rog`, but the form `warag` may be a
+non-finite verb form. Do not yet label it infinitive or participle.
+
+### Past paradigm candidates
+
+- `man shuzagan` — I went. (Round 2)
+- `Man shuzagun.` — We went.
+- `Tho shuzage.` — You went (singular).
+- `Aan shuza.` — He went.
+
+These examples suggest that past forms vary with subject/person, with
+surface forms `shuzagan`, `shuzagun`, `shuzage`, and `shuza`.
+The data do not yet establish a single invariant stem plus suffixes:
+possible stem alternation, endings, and orthographic variation need testing.
+In particular, do not automatically parse `shuzagan` as `shuza + gan`.
+
+### Possessive noun phrases
+
+- `ae mainn log een` — This is my house.
+- `aan thai log een` — That is your house.
+- `Main ab.` — My water.
+- `Thai av.` — Your water.
+
+The possessor forms `mainn` (before `log`) and `Main` (before
+`ab`) differ in the supplied spelling; similarly, the water noun appears
+as `ab` in “my water” but `av` in “your water” and earlier examples.
+These differences may reflect pronunciation, sandhi, case/construct
+morphology, or inconsistent raw spelling. They must remain separate raw
+forms pending speaker clarification; do not silently merge `ab` and `av`
+or `Main` and `mainn`.
+
+## Current implementation boundary
+
+The above observations are suitable for a speaker corpus and future
+paradigm investigation. They are not yet sufficient to implement a reliable
+finite-state morphology or Apertium transfer rules. Do not alter the
+Kurdish scaffold's language identity or claim a working translator until
+Balochi monolingual resources, bilingual entries, transfer rules, and tests
+are implemented and built.
 
 ## Next elicitation targets
 
-Next test the same verbs across person and number, and separate the elements
-in the negative and possessive constructions. Ask for short, natural
-sentences, preserve raw speaker spellings, and only then propose a canonical
-orthography and paradigms.
+Next clarify the surface contrasts and test the past paradigm and the
+pronoun/determiner forms with repeated, controlled minimal examples.
