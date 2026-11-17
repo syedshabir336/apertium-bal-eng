@@ -1,88 +1,73 @@
-kmr and English
-
-                            apertium-kmr-eng
+Suleimani Balochi ↔ English (Apertium language-pair prototype)
 ===============================================================================
 
-This is an Apertium language pair for translating between kmr and
-English. What you can use this language package for:
+This repository is intended to become a bidirectional Apertium language pair
+for Suleimani Balochi and English:
 
-* Translating between kmr and English
-* Morphological analysis of kmr and English
-* Part-of-speech tagging of kmr and English
+* Balochi → English (bal-eng)
+* English → Balochi (eng-bal)
 
-For information on the latter two points, see subheading "For more
-information" below
+## Important development status
 
-Requirements
-===============================================================================
+The repository currently contains a Kurdish (Northern Kurdish/Kurmanji, `kmr`)
+Apertium scaffold and linguistic resources. The repository name and its
+description do not make those resources Balochi. In particular, the existing
+bilingual dictionary, transfer rules, test fixtures, and mode definitions must
+not be presented as a working Balochi translator.
 
-You will need the following software installed:
+This first migration step establishes the target language identity and
+documents the work still required. Until Balochi monolingual data and
+Balochi-specific bilingual resources have been integrated and tested, this
+package is a development prototype, not a functional Suleimani Balochi
+translation system.
 
-* lttoolbox (>= 3.3.0)
-* apertium (>= 3.3.0)
-* vislcg3 (>= 0.9.9.10297)
-* apertium-kmr
-* apertium-eng
+## Target language profile
 
-If this does not make any sense, we recommend you look at: apertium.org
+* Language: Balochi (`bal`, ISO 639-3)
+* Variety: Suleimani Balochi, as specified and reviewed by native speakers
+* Target directions: `bal-eng` and `eng-bal`
+* Initial orthography: to be agreed with native speakers before dictionary
+  entries and morphological paradigms are committed
 
-Compiling
-===============================================================================
+The dialect label "Suleimani" must be treated as a linguistic requirement,
+not as a synonym for Kurdish Sulaymaniyah/Sorani or Kurmanji. Do not import
+Kurdish vocabulary, morphology, or grammatical rules as Balochi data.
 
-Given the requirements being installed, you should be able to just run:
+## Migration plan
 
-$ ./configure
-$ make
-# make install
+1. Establish and document the Suleimani Balochi dialect and spelling
+   conventions with native-speaker review.
+2. Add or develop a Balochi monolingual Apertium package (`apertium-bal`):
+   lexical categories, morphological paradigms, analyzer/generator,
+   disambiguation, and tests.
+3. Replace the Kurdish bilingual dictionary with reviewed Balochi–English
+   lexical entries and explicit part-of-speech/semantic mappings.
+4. Rewrite both translation directions' transfer, lexical-selection,
+   interchunk, and postchunk rules for Balochi grammar and English.
+5. Replace Kurdish corpora, tagger models, test fixtures, and documentation
+   with Balochi material.
+6. Update build dependencies, package metadata, modes, and installation paths
+   to `bal-eng` / `eng-bal`; validate and run both directions end-to-end.
 
-You can use ./autogen.sh instead of ./configure you're compiling from
-SVN. If you installed any prerequisite language packages using a --prefix
-to ./configure, make sure to give the same --prefix to ./configure here.
+See [docs/SULEIMANI-BALOCHI-DESIGN.md](docs/SULEIMANI-BALOCHI-DESIGN.md)
+for the initial linguistic and engineering checklist.
 
-Testing
-===============================================================================
+## Build status
 
-If you are in the source directory after running make, the following
-commands should work:
+The current build configuration still refers to the legacy `kmr` scaffold.
+It is intentionally not advertised as a Balochi build yet: switching only
+package labels or mode names would produce a misleading or broken translator.
+The build configuration will be migrated together with the corresponding
+Balochi lexical and morphological resources.
 
-$  echo "TODO test sentence 1" | apertium -d . kmr-eng
-TODO test translated sentence 1
+## Apertium
 
-$ echo "TODO test sentence 2" | apertium -d . eng-kmr
-TODO test translated sentence 2
+Apertium is a free/open-source rule-based machine-translation platform.
+For general information and installation instructions, see
+https://apertium.org/ and https://wiki.apertium.org/wiki/Installation.
 
-After installing somewhere in $PATH, you should be able to do e.g.
+## License
 
-$  echo "TODO test sentence 1" | apertium kmr-eng
-TODO test translated sentence 1
-
-Files and data
-===============================================================================
-
-* apertium-kmr-eng.kmr-eng.dix  - Bilingual dictionary
-* apertium-kmr-eng.kmr-eng.t1x  - Chunking rules for translating into kmr
-* apertium-kmr-eng.eng-kmr.t1x  - Chunking rules for translating into English
-* apertium-kmr-eng.kmr-eng.t2x  - Interchunk rules for translating into kmr
-* apertium-kmr-eng.eng-kmr.t2x  - Interchunk rules for translating into English
-* apertium-kmr-eng.kmr-eng.t3x  - Postchunk rules for translating into kmr
-* apertium-kmr-eng.eng-kmr.t3x  - Postchunk rules for translating into English
-* apertium-kmr-eng.kmr-eng.lrx  - Lexical selection rules for translating into kmr
-* apertium-kmr-eng.eng-kmr.lrx  - Lexical selection rules for translating into English
-* modes.xml                     - Translation modes
-
-For more information
-===============================================================================
-
-* https://wiki.apertium.org/wiki/Installation
-* https://wiki.apertium.org/wiki/apertium-kmr-eng
-* https://wiki.apertium.org/wiki/Using_an_lttoolbox_dictionary
-
-Help and support
-===============================================================================
-
-If you need help using this language pair or data, you can contact:
-
-* Mailing list: apertium-stuff@lists.sourceforge.net
-* IRC: #apertium on irc.oftc.net
-
-See also the file AUTHORS included in this distribution.
+See [COPYING](COPYING). Existing files retain their original copyright and
+license notices. New linguistic data must include its source and applicable
+license/permission information.
