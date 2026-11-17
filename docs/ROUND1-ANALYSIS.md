@@ -11,9 +11,8 @@
 All speaker examples are native-speaker elicitation. Original Latin spellings,
 word boundaries, capitalization, and punctuation are preserved, except where
 the speaker explicitly corrected an entry. No automatic transliteration or
-spelling correction has been applied. Round 5 contains seven supplied forms
-for eight prompts; one prompt remains unanswered and one supplied form needs
-meaning confirmation.
+spelling correction has been applied. Round 5 includes a follow-up answer
+for “They do not eat food”; its fifth prompt/form mismatch remains flagged.
 
 The five initial lexical entries in `data/bal-eng-lexicon.tsv` remain marked
 `speaker-provided-unreviewed`.
@@ -185,27 +184,29 @@ Round 5 is recorded in `data/speaker-corpus-round5.tsv`.
 - `Tho nagn na warage.` — You do not eat food (one person).
 - `Aan nagn na warage.` — He does not eat food.
 - `Maa nagn na warangu.` — We do not eat food.
+- `Aan nagn na warangan.` — They do not eat food. (confirmed in follow-up)
 
-Across these examples, `nagn na` occurs before the eating form. This is
-consistent with a possible negative marker `na` in this construction,
-but do not generalize it to all clauses or assume its precise grammatical
-scope yet. The positive Round 4 forms (`Man nagn waranga`,
-`tho nagn warage`, `aan nagn warange`, `ma nagn warangu`) offer
-a useful comparison. Note the speaker's exact `Maa` in Round 5 versus
-`ma` in Round 4; do not normalize the difference.
+Across these five confirmed negative examples, `nagn na` occurs before
+the eating form. This supports testing `na` as a negative element in this
+construction, but do not generalize it to all clauses or assume its exact
+grammatical scope yet. The positive Round 4 forms
+(`Man nagn waranga`, `tho nagn warage`, `aan nagn warange`,
+`ma nagn warangu`) offer a comparison. Note the speaker's exact `Maa`
+in Round 5 versus `ma` in Round 4; do not normalize the difference.
 
-### Plural “they” and an unresolved translation
+### Plural “they” and prompt/form mismatch
 
-The supplied fifth form is exactly `Aan nagn na warangan.`, corresponding
-by prompt order to “They eat food.” Because it contains `na`, which also
-appears in the explicitly negative examples above, its English meaning
-and/or the supplied Balochi form needs confirmation. It is preserved
-without alteration and must not be used as a confirmed positive example.
-The next prompt, “They do not eat food,” has no separate supplied answer
-yet. Do not invent one.
+The fifth Round 5 response was supplied against the prompt “They eat food”
+as exactly `Aan nagn na warangan.`. The speaker subsequently supplied
+the same exact form as the answer to “They do not eat food”:
+`Aan nagn na warangan.` This follow-up is recorded separately as R5-06
+and confirms that this form means “They do not eat food” in this context.
 
-Round 3 contains `Aan rog an` for “They are going”; this may help elicit
-a clear plural subject form, but does not settle the Round 5 eating form.
+The original R5-05 entry remains unchanged and flagged
+`speaker-provided-needs-meaning-confirmation`; do not treat it as a
+confirmed positive (“They eat food”) translation. The positive plural
+eating form is still needed. Round 3 contains `Aan rog an` for “They are
+going”, but that does not establish the positive simple-present form.
 
 ### Demonstrative and possessive noun phrases
 
@@ -227,13 +228,13 @@ speaker confirmation.
   negation morphology is not yet segmented.
 - Eating examples show `warag` in progressive constructions and
   `waranga/warage/warange/warangu` in simple-present translations.
-  Round 5 adds `nagn na waranga/warage/warangu` in negative sentences.
-  These patterns need further controlled elicitation before rule creation.
+  Round 5 supplies negative forms `nagn na waranga/warage/warangu/warangan`.
+  The positive plural form remains unelicited.
 - Possessive/demonstrative examples include `mainn`, `Main`, `mai`,
   `ae`, `Ee`, and `Aa`; keep them distinct until confirmed.
 - The Round 3 correction `ma shuzagun` remains authoritative.
-- The Round 5 fifth response has a prompt/form mismatch candidate; the
-  sixth response is still missing.
+- The Round 5 form `Aan nagn na warangan` is confirmed for the negative
+  “They do not eat food”; it is not confirmed for the positive prompt.
 
 ## Current implementation boundary
 
@@ -245,7 +246,7 @@ are implemented and built.
 
 ## Next elicitation targets
 
-Clarify the Round 5 fifth and sixth answers, and continue short everyday
+Elicit the positive plural “They eat food” form, and continue short everyday
 sentences that distinguish person, number, tense/aspect, negation, and
 demonstratives. Retain exact raw answers before proposing standardized
 spellings or grammatical segmentation.
