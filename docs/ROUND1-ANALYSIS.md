@@ -1,4 +1,4 @@
-# Speaker elicitation and research notes: Rounds 1–4
+# Speaker elicitation and research notes: Rounds 1–5
 
 ## Data provenance
 
@@ -6,12 +6,14 @@
 - Round 2: `data/speaker-corpus-round2.tsv`
 - Round 3: `data/speaker-corpus-round3.tsv`
 - Round 4: `data/speaker-corpus-round4.tsv`
+- Round 5: `data/speaker-corpus-round5.tsv`
 
-All forty English prompts and Balochi equivalents were supplied by a
-native speaker. Original Latin spellings, word boundaries, capitalization,
-and punctuation are preserved, except where the speaker explicitly
-corrected an entry. No automatic transliteration or spelling correction
-has been applied.
+All speaker examples are native-speaker elicitation. Original Latin spellings,
+word boundaries, capitalization, and punctuation are preserved, except where
+the speaker explicitly corrected an entry. No automatic transliteration or
+spelling correction has been applied. Round 5 contains seven supplied forms
+for eight prompts; one prompt remains unanswered and one supplied form needs
+meaning confirmation.
 
 The five initial lexical entries in `data/bal-eng-lexicon.tsv` remain marked
 `speaker-provided-unreviewed`.
@@ -145,14 +147,12 @@ Round 4 adds eight speaker-supplied examples, preserved in
 The repeated sequence `nagn warang-` is a useful candidate for a stable
 food/eating construction, while the endings differ by subject in these
 four examples: `-a`, `-e`, `-e`, and `-u` as visible surface endings.
-This is only a descriptive observation: do not yet segment `waranga`,
-`warage`, `warange`, or `warangu` into stem and suffix, and do not
-assume the exact ending boundaries. In particular, the forms for singular
-“you” and “he” are not identical even though both visibly end in `e`.
+This is only a descriptive observation: do not yet segment these forms
+into stem and suffix or assume exact ending boundaries.
 
 These examples contrast with Round 2/3 progressive examples containing
-`warag` (e.g. `Ma nagn warag aan`). The difference may be grammatical,
-but more examples are needed before defining a tense/aspect rule.
+`warag` (e.g. `Ma nagn warag aan`). More examples are needed before
+defining a tense/aspect rule.
 
 ### Negative motion
 
@@ -163,41 +163,77 @@ Compare with positive motion:
 - `man rog aan` — I am going.
 - `tho rog ee` — You are going (one person).
 
-The negative examples contain `naro-`/ `narog-` on the surface where
-positive examples contain `rog`, and their endings differ (`-an`,
-`-e`). It is tempting to analyse an attached negative marker, but the
-exact boundary and the relation between `na`, `naro`, and `rog` are
-not established. Keep the complete forms intact.
+The negative examples contain `narog-` on the surface where positive
+examples contain `rog`. The exact boundary and relation between `na`,
+`naro`, and `rog` are not established.
 
 ### Demonstrative and possessive noun phrases
 
 - `Ee mainn av een.` — This is my water.
 - `Ee mainn nagn een.` — This is my food.
 
-Compare with Round 1–3:
-- `ae mainn log een` — This is my house.
-- `Main ab.` — My water.
-- `Thai av.` — Your water.
+Compare with `ae mainn log een` — This is my house. Preserve `Ee`
+distinct from earlier `ae` until the speaker confirms their relationship.
 
-The new pair holds `Ee mainn ... een` constant while changing the noun
-(`av` / `nagn`). This supports treating the two as parallel sentence
-examples, but does not yet establish the precise grammatical role or
-meaning range of `Ee`, `mainn`, or final `een`. Preserve `Ee` exactly;
-do not normalize it to earlier `ae` without speaker confirmation.
+## Round 5 observations (hypotheses only)
+
+Round 5 is recorded in `data/speaker-corpus-round5.tsv`.
+
+### Negative eating forms
+
+- `Ma nagn na waranga.` — I do not eat food.
+- `Tho nagn na warage.` — You do not eat food (one person).
+- `Aan nagn na warage.` — He does not eat food.
+- `Maa nagn na warangu.` — We do not eat food.
+
+Across these examples, `nagn na` occurs before the eating form. This is
+consistent with a possible negative marker `na` in this construction,
+but do not generalize it to all clauses or assume its precise grammatical
+scope yet. The positive Round 4 forms (`Man nagn waranga`,
+`tho nagn warage`, `aan nagn warange`, `ma nagn warangu`) offer
+a useful comparison. Note the speaker's exact `Maa` in Round 5 versus
+`ma` in Round 4; do not normalize the difference.
+
+### Plural “they” and an unresolved translation
+
+The supplied fifth form is exactly `Aan nagn na warangan.`, corresponding
+by prompt order to “They eat food.” Because it contains `na`, which also
+appears in the explicitly negative examples above, its English meaning
+and/or the supplied Balochi form needs confirmation. It is preserved
+without alteration and must not be used as a confirmed positive example.
+The next prompt, “They do not eat food,” has no separate supplied answer
+yet. Do not invent one.
+
+Round 3 contains `Aan rog an` for “They are going”; this may help elicit
+a clear plural subject form, but does not settle the Round 5 eating form.
+
+### Demonstrative and possessive noun phrases
+
+- `Aa mai av een.` — That is my water.
+- `Aa mai nagn een.` — That is my food.
+
+These two parallel examples preserve `Aa` and `mai` exactly. Compare
+with Round 4 `Ee mainn av een` / `Ee mainn nagn een`, and earlier
+`ae mainn log een`. The differences `Aa` vs `Ee`, and `mai` vs
+`mainn`, may be meaningful or may reflect spelling variation; no
+normalization or morphological segmentation should be applied without
+speaker confirmation.
 
 ## Cross-round working hypotheses (not confirmed rules)
 
-- `man`, `tho`, `aan`, `ma`, and `Sha kul` occur in subject positions
-  with different English person/number meanings. Capitalization is retained
-  as supplied and may or may not reflect pronunciation.
+- Subject forms include `man`, `Man`, `ma`, `Maa`, `tho`, `Tho`,
+  `aan`, `Aan`, and `Sha kul`. Preserve case and spelling as supplied.
 - Motion examples show positive `rog` and negative `narog-` forms, but
   negation morphology is not yet segmented.
 - Eating examples show `warag` in progressive constructions and
   `waranga/warage/warange/warangu` in simple-present translations.
-  These may be related forms; do not impose a paradigm yet.
-- Possessive examples include `mainn` and `Main`; the demonstratives
-  `ae` and `Ee` must remain distinct until checked.
+  Round 5 adds `nagn na waranga/warage/warangu` in negative sentences.
+  These patterns need further controlled elicitation before rule creation.
+- Possessive/demonstrative examples include `mainn`, `Main`, `mai`,
+  `ae`, `Ee`, and `Aa`; keep them distinct until confirmed.
 - The Round 3 correction `ma shuzagun` remains authoritative.
+- The Round 5 fifth response has a prompt/form mismatch candidate; the
+  sixth response is still missing.
 
 ## Current implementation boundary
 
@@ -209,7 +245,7 @@ are implemented and built.
 
 ## Next elicitation targets
 
-Continue with short everyday sentences that distinguish person, number,
-tense/aspect, negation, and demonstratives. Ask the speaker in ordinary
-English, and retain exact raw answers before proposing any standardized
-spelling or grammatical segmentation.
+Clarify the Round 5 fifth and sixth answers, and continue short everyday
+sentences that distinguish person, number, tense/aspect, negation, and
+demonstratives. Retain exact raw answers before proposing standardized
+spellings or grammatical segmentation.
