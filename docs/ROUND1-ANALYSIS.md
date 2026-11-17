@@ -1,15 +1,17 @@
-# Speaker elicitation and research notes: Rounds 1–3
+# Speaker elicitation and research notes: Rounds 1–4
 
 ## Data provenance
 
 - Round 1: `data/speaker-corpus-round1.tsv`
 - Round 2: `data/speaker-corpus-round2.tsv`
 - Round 3: `data/speaker-corpus-round3.tsv`
+- Round 4: `data/speaker-corpus-round4.tsv`
 
-All thirty English prompts and Balochi equivalents were supplied by a
-native speaker. Original Latin spellings, word boundaries, and punctuation
-are preserved, except where the speaker explicitly corrected an entry.
-No automatic transliteration or spelling correction has been applied.
+All forty English prompts and Balochi equivalents were supplied by a
+native speaker. Original Latin spellings, word boundaries, capitalization,
+and punctuation are preserved, except where the speaker explicitly
+corrected an entry. No automatic transliteration or spelling correction
+has been applied.
 
 The five initial lexical entries in `data/bal-eng-lexicon.tsv` remain marked
 `speaker-provided-unreviewed`.
@@ -110,7 +112,7 @@ Preserve capitalization as given. The endings resemble the pattern with
 
 **Correction history:** the Round 3 response was initially transcribed as
 `Man shuzagun`. The speaker explicitly corrected this to `ma shuzagun`.
-The corpus file now contains the corrected form and marks it
+The corpus file contains the corrected form and marks it
 `speaker-corrected-unreviewed`. Do not reintroduce `man shuzagun` as
 a valid example. The forms `shuzagan`, `shuzagun`, `shuzage`, and
 `shuza` suggest subject-conditioned past forms, but their segmentation
@@ -126,6 +128,77 @@ and paradigm remain unconfirmed.
 Keep `mainn` and `Main`, and `ab` and `av`, distinct in raw data until
 the speaker confirms whether they sound different or are spelling variants.
 
+## Round 4 observations (hypotheses only)
+
+Round 4 adds eight speaker-supplied examples, preserved in
+`data/speaker-corpus-round4.tsv`.
+
+### Simple present: eating food
+
+| English | Speaker's exact form |
+| --- | --- |
+| I eat food. | `Man nagn waranga.` |
+| You eat food (one person). | `tho nagn warage.` |
+| He eats food. | `aan nagn warange.` |
+| We eat food. | `ma nagn warangu.` |
+
+The repeated sequence `nagn warang-` is a useful candidate for a stable
+food/eating construction, while the endings differ by subject in these
+four examples: `-a`, `-e`, `-e`, and `-u` as visible surface endings.
+This is only a descriptive observation: do not yet segment `waranga`,
+`warage`, `warange`, or `warangu` into stem and suffix, and do not
+assume the exact ending boundaries. In particular, the forms for singular
+“you” and “he” are not identical even though both visibly end in `e`.
+
+These examples contrast with Round 2/3 progressive examples containing
+`warag` (e.g. `Ma nagn warag aan`). The difference may be grammatical,
+but more examples are needed before defining a tense/aspect rule.
+
+### Negative motion
+
+- `Man narogan.` — I am not going.
+- `Tho naroge.` — You are not going (one person).
+
+Compare with positive motion:
+- `man rog aan` — I am going.
+- `tho rog ee` — You are going (one person).
+
+The negative examples contain `naro-`/ `narog-` on the surface where
+positive examples contain `rog`, and their endings differ (`-an`,
+`-e`). It is tempting to analyse an attached negative marker, but the
+exact boundary and the relation between `na`, `naro`, and `rog` are
+not established. Keep the complete forms intact.
+
+### Demonstrative and possessive noun phrases
+
+- `Ee mainn av een.` — This is my water.
+- `Ee mainn nagn een.` — This is my food.
+
+Compare with Round 1–3:
+- `ae mainn log een` — This is my house.
+- `Main ab.` — My water.
+- `Thai av.` — Your water.
+
+The new pair holds `Ee mainn ... een` constant while changing the noun
+(`av` / `nagn`). This supports treating the two as parallel sentence
+examples, but does not yet establish the precise grammatical role or
+meaning range of `Ee`, `mainn`, or final `een`. Preserve `Ee` exactly;
+do not normalize it to earlier `ae` without speaker confirmation.
+
+## Cross-round working hypotheses (not confirmed rules)
+
+- `man`, `tho`, `aan`, `ma`, and `Sha kul` occur in subject positions
+  with different English person/number meanings. Capitalization is retained
+  as supplied and may or may not reflect pronunciation.
+- Motion examples show positive `rog` and negative `narog-` forms, but
+  negation morphology is not yet segmented.
+- Eating examples show `warag` in progressive constructions and
+  `waranga/warage/warange/warangu` in simple-present translations.
+  These may be related forms; do not impose a paradigm yet.
+- Possessive examples include `mainn` and `Main`; the demonstratives
+  `ae` and `Ee` must remain distinct until checked.
+- The Round 3 correction `ma shuzagun` remains authoritative.
+
 ## Current implementation boundary
 
 These observations support a speaker corpus and hypotheses for further
@@ -136,5 +209,7 @@ are implemented and built.
 
 ## Next elicitation targets
 
-Clarify the sound/spelling contrasts and test the past paradigm and pronoun
-forms with controlled everyday examples.
+Continue with short everyday sentences that distinguish person, number,
+tense/aspect, negation, and demonstratives. Ask the speaker in ordinary
+English, and retain exact raw answers before proposing any standardized
+spelling or grammatical segmentation.
